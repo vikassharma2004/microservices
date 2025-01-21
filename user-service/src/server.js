@@ -95,7 +95,3 @@ process.on("unhandledRejection", (reason, promise) => {
 
 
 
-// any error will be handled here
-process.on("uncaughtException", (error) => {
-  logger.error("Uncaught Exception", error);
-})
