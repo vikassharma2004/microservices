@@ -80,6 +80,9 @@ app.use("/api/auth", routes);
 // Error handler
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.send("User Service is running!");
+});
 // Start the server
 app.listen(PORT, () => {
   logger.info(`Identity service running on port ${PORT}`);
