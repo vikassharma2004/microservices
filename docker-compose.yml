@@ -1,6 +1,4 @@
 
-
-
 services:
   app:
     build: ./api-gateway
@@ -74,14 +72,14 @@ services:
       - "5672:5672"
       - "15672:15672"
     healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]  
       interval: 30s
       timeout: 10s
       retries: 5
 
 
      
-#  test: ["CMD", "rabbitmq-diagnostics", "-q","ping"] 
+# 
 
 
     
