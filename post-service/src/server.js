@@ -45,8 +45,13 @@ app.use("/api/posts",(req, res, next) => {
   const Startserver=async()=>{
     try {
       await connectrabbitmq();
+      
       app.listen(PORT, () => {
         logger.info(`Post service running on port ${PORT}`);
+      });
+
+      app.get("/", (req, res) => {
+        res.send("Post Service is running!");
       });
 
     } catch (error) {
